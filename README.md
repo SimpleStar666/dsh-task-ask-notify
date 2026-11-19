@@ -2,6 +2,18 @@
 
 [English](README.en.md) | [中文](README.md)
 
+> **来源与署名**
+>
+> 本仓库 fork 自 [**deadbushxw/dsh-task-ask-notify**](https://github.com/deadbushxw/dsh-task-ask-notify)。
+> 上游的作者是 **deadbushxw**，本项目的绝大部分代码来自他，`LICENSE` 里的版权声明也属于他。
+>
+> 我在上游基础上增加的是「**运行失败也提醒**」：失败时立刻弹通知、播一段和完成提示音
+> **反向**的下行三音、正文附上失败原因。顺带修了一个「有弹窗但没声音」的问题
+> （精简版 Windows 上 WPF `MediaPlayer` 静默失败）。增量的具体清单见
+> [`dsh-task-ask-notify-LOCAL-CHANGES.md`](dsh-task-ask-notify-LOCAL-CHANGES.md)。
+>
+> 如果你要的是原版，请去上游仓库；这个 fork 的价值在于多出的失败提醒。
+
 一个面向 Windows 的 **DSH 宿主侧插件**（DeepSeek Harness Host plugin）：当一轮任务
 **完成**、**运行失败**，或模型**向你提问**时，同时弹出一条真实的 Windows 11 系统通知并播放一段提示音。
 

@@ -2,6 +2,22 @@
 
 [English](README.en.md) | [中文](README.md)
 
+> **Provenance and credit**
+>
+> This repository is a fork of [**deadbushxw/dsh-task-ask-notify**](https://github.com/deadbushxw/dsh-task-ask-notify).
+> The upstream author is **deadbushxw**, who wrote the vast majority of this code, and the
+> copyright notice in `LICENSE` is his.
+>
+> What I added on top of upstream is **failure alerting**: a failed turn now pops a
+> notification immediately, plays a *descending* three-note cue that is the deliberate
+> mirror image of the rising completion chime, and carries the failure reason in the body.
+> I also fixed a "popup but no sound" defect (WPF `MediaPlayer` failing silently on trimmed
+> Windows installs). The exact change list is in
+> [`dsh-task-ask-notify-LOCAL-CHANGES.md`](dsh-task-ask-notify-LOCAL-CHANGES.md).
+>
+> If you want the original, go to the upstream repository; the value of this fork is the
+> failure alerting it adds.
+
 A Host-side [DeepSeek Harness](https://github.com/deepseek-ai) plugin for Windows:
 when a turn **finishes**, **fails**, or when the model **asks you a question**, it pops a
 real Windows 11 notification and plays a sound at the same time.
