@@ -51,7 +51,7 @@ registers the loader row, and hot-applies it. Do not hand-edit the profile.
 ### 1. Get the code onto the machine
 
 ```sh
-git clone <this-repository-url> "%USERPROFILE%\.dsh\dsh-plugins\dsh-task-ask-notify"
+git clone https://github.com/SimpleStar666/dsh-task-ask-notify.git "%USERPROFILE%\.dsh\dsh-plugins\dsh-task-ask-notify"
 ```
 
 Any directory works; the path below is only an example. There is no build step and

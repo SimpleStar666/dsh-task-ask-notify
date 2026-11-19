@@ -39,7 +39,7 @@
 ### 1. 把代码放到机器上
 
 ```sh
-git clone <本仓库地址> "%USERPROFILE%\.dsh\dsh-plugins\dsh-task-ask-notify"
+git clone https://github.com/SimpleStar666/dsh-task-ask-notify.git "%USERPROFILE%\.dsh\dsh-plugins\dsh-task-ask-notify"
 ```
 
 放哪个目录都行，上面的路径只是示例。没有构建步骤，也不需要先 `npm install` —— 唯一那个
