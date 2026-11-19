@@ -1,0 +1,57 @@
+{
+  "name": "dsh-task-ask-notify",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH Host plugin: a Windows notification and a sound when a turn finishes or the model asks you a question.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "notification",
+    "toast",
+    "sound"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "icon": "./icon.svg",
+  "files": [
+    "lib",
+    "tools",
+    "locale",
+    "audio",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "chime": "node tools/gen-default-chime.mjs --check",
+    "import-audio": "node tools/import-audio.mjs",
+    "verify-audio": "node tools/import-audio.mjs --verify",
+    "selftest": "node tools/win-alert-selftest.mjs",
+    "verify-boundary": "node tools/verify-repo-boundary.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

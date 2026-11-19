@@ -1,0 +1,23 @@
+# Attributes that keep the published tree byte-stable for every clone.
+#
+# `win-alert.ps1` is stored as UTF-8 **with BOM**, and Windows PowerShell detects
+# a script's encoding from that BOM: without it the engine falls back to ANSI and
+# the file's non-ASCII comment text is mangled. Line endings are normalised to LF
+# in the repository and checked out as CRLF, which is what PowerShell expects; the
+# BOM byte sequence is not affected by that conversion.
+* text=auto
+
+*.ps1 text eol=crlf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+# Binary assets: never diff, never convert.
+*.wav binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary

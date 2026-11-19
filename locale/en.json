@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Task Completion Alerts",
+    "description": "Pops a Windows toast and plays a sound when a turn finishes, or when the model asks you a question. Host-side plugin, Windows only; preview sounds and set the volume on its settings page - config changes apply live, code changes need a restart."
+  }
+}

@@ -1,0 +1,16 @@
+# dsh-task-ask-notify - the Loader rows this bundle contributes.
+#
+# This file is the whole reason the package is installable as a bundle: DSH reads
+# `dsh.bundle.patch` from package.json, applies these rows to the active profile,
+# and then loads the package by name. Install it with the in-app Plugins page or
+# with `plugin_manager install_bundle`; never hand-edit the profile's own patch.
+#
+# `config:` holds this plugin's settings. Every field is optional; the empty
+# object means "use the schema defaults". To change a value, edit it here and
+# reinstall the bundle, or - without touching the profile at all - write the same
+# fields into the JSON file described in README.md > Configuration, which is
+# re-read while DSH runs.
+- insert:
+    - id: dsh-task-ask-notify
+      name: 'dsh-task-ask-notify'
+      config: {}
